@@ -24,8 +24,8 @@ jobs:
       - name: Deploy to Vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: your-vercel-org-id  # substitua pelo seu ID de organização, se aplicável
-          VERCEL_PROJECT_ID: your-vercel-project-id  # substitua pelo ID do seu projeto
+          VERCEL_ORG_ID: team_i4K3JoMAO8nbtuWExw2iyqBo  # substitua pelo seu ID de organização, se aplicável
+          VERCEL_PROJECT_ID: prj_vMRYdoGIj78dGqspUwzpfZDXHGUL  # substitua pelo ID do seu projeto
         run: |
           npm install -g vercel
           vercel --prod --confirm --token $VERCEL_TOKEN
