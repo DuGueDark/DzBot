@@ -1,0 +1,31 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main  # ou a branch que você deseja monitorar
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  # ou a versão que você usa
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Deploy to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: your-vercel-org-id  # substitua pelo seu ID de organização, se aplicável
+          VERCEL_PROJECT_ID: your-vercel-project-id  # substitua pelo ID do seu projeto
+        run: |
+          npm install -g vercel
+          vercel --prod --confirm --token $VERCEL_TOKEN
