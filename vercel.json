@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/server.js",   // Arquivo de entrada do seu aplicativo
+      "use": "@vercel/node" // Uso do runtime do Node.js
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)", // Redireciona todas as chamadas para a API
+      "dest": "/api/$1"   // Mapeia para a pasta API
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production", // Variável de ambiente
+    "API_KEY": "@api_key"     // Referência a uma variável de ambiente secreta no Vercel
+  }
+}
