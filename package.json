@@ -1,0 +1,20 @@
+{
+  "name": "dzbot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "author": "@eduu_.sts7",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "discord.js": "^14.16.3",
+    "express": "^4.21.1",
+    "mineflayer": "^4.22.0",
+    "mongodb": "^6.9.0",
+    "node-fetch": "^3.3.2"
+  }
+}
