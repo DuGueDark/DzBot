@@ -5,6 +5,10 @@ const PORT = 3000;
 
 app.use(express.json());
 
+app.get('/', function (req, res) {
+  res.send('Hello World')
+})
+
 // Importar as rotas
 import routes from './routes/apiRoutes.js';
 
