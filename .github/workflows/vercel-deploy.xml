@@ -28,4 +28,4 @@ jobs:
           VERCEL_PROJECT_ID: prj_sxnt9YVdmlW1sxNDtRcDX0KLjT4r  # substitua pelo ID do seu projeto
         run: |
           npm install -g vercel
-          vercel --prod --confirm --token $VERCEL_TOKEN
+          vercel deploy --prod --confirm --token $VERCEL_TOKEN
